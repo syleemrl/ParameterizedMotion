@@ -1,0 +1,112 @@
+<Skeleton name="Humanoid">
+<Joint type="FreeJoint" name="Hips" parent_name="None" size="0.2 0.169333 0.12" mass="8">
+<BodyPosition translation="-0.000000 0.017149 -0.007340" />
+<JointPosition translation="0 0 0" />
+<TorqueLimit norm="0"/>
+</Joint>
+<Joint type="BallJoint" name="Spine" parent_name="Hips" size="0.2 0.100835 0.12" mass="8">
+<BodyPosition translation="0.000000 0.050418 -0.005004" />
+<JointPosition translation="0.000000 0.101816 0.001315" />
+<TorqueLimit norm="200"/>
+</Joint>
+<Joint type="BallJoint" name="Spine1" parent_name="Spine" size="0.2 0.091000 0.12" mass="5">
+<BodyPosition translation="0.000000 0.045500 -0.006867" />
+<JointPosition translation="0.000000 0.100835 -0.010008" />
+<TorqueLimit norm="100"/>
+</Joint>
+<Joint type="BallJoint" name="Spine2" parent_name="Spine1" size="0.15 0.166717 0.12" mass="5">
+<BodyPosition translation="0.000002 0.083359 -0.013140" />
+<JointPosition translation="0.000000 0.091000 -0.013734" />
+<TorqueLimit norm="100"/>
+</Joint>
+<Joint type="BallJoint" name="Neck" parent_name="Spine2" size="0.1 0.096179 0.1" mass="1.5">
+<BodyPosition translation="0.000000 0.048089 0.008425" />
+<JointPosition translation="0.000000 0.166717 -0.025162" />
+<TorqueLimit norm="50"/>
+</Joint>
+<Joint type="BallJoint" name="Head" parent_name="Neck" size="0.120000 0.100000 0.120000" mass="3">
+<BodyPosition translation="0.000000 0.050000 0.000000" />
+<JointPosition translation="0.000000 0.096179 0.016850" />
+<TorqueLimit norm="50"/>
+</Joint>
+<Joint type="BallJoint" name="LeftShoulder" parent_name="Spine2" size="0.105924 0.125246 0.07" mass="1">
+<BodyPosition translation="0.052962 -0.002623 -0.011161" />
+<JointPosition translation="0.045705 0.109460 -0.026280" />
+<TorqueLimit norm="100"/>
+</Joint>
+<Joint type="BallJoint" name="LeftArm" parent_name="LeftShoulder" size="0.278415 0.07 0.07" mass="2.1">
+<BodyPosition translation="0.139208 -0.000000 0.000000" />
+<JointPosition translation="0.105924 -0.005246 -0.022321" />
+<TorqueLimit norm="100"/>
+</Joint>
+<Joint type="BallJoint" name="LeftForeArm" parent_name="LeftArm" size="0.283288 0.07 0.07" mass="1.2">
+<BodyPosition translation="0.141644 -0.000000 0.000000" />
+<JointPosition translation="0.278415 -0.000001 0.000000" />
+<TorqueLimit norm="60"/>
+</Joint>
+<Joint type="BallJoint" name="LeftHand" parent_name="LeftForeArm" size="0.100000 0.07 0.07" mass="0.4">
+<BodyPosition translation="0.050000 0.000000 0.000000" />
+<JointPosition translation="0.283288 -0.000000 0.000000" />
+<TorqueLimit norm="60"/>
+</Joint>
+<Joint type="BallJoint" name="RightShoulder" parent_name="Spine2" size="0.105928 0.125248 0.07" mass="1">
+<BodyPosition translation="-0.052964 -0.002624 -0.011161" />
+<JointPosition translation="-0.045700 0.109462 -0.026280" />
+<TorqueLimit norm="100"/>
+</Joint>
+<Joint type="BallJoint" name="RightArm" parent_name="RightShoulder" size="0.278415 0.07 0.07" mass="2.1">
+<BodyPosition translation="-0.139208 -0.000000 0.000000" />
+<JointPosition translation="-0.105928 -0.005248 -0.022321" />
+<TorqueLimit norm="100"/>
+</Joint>
+<Joint type="BallJoint" name="RightForeArm" parent_name="RightArm" size="0.283288 0.07 0.07" mass="1.2">
+<BodyPosition translation="-0.141644 0.000000 0.000000" />
+<JointPosition translation="-0.278415 -0.000000 0.000000" />
+<TorqueLimit norm="60"/>
+</Joint>
+<Joint type="BallJoint" name="RightHand" parent_name="RightForeArm" size="0.100000 0.07 0.07" mass="0.4">
+<BodyPosition translation="-0.050000 0.000000 0.000000" />
+<JointPosition translation="-0.283288 0.000000 0.000001" />
+<TorqueLimit norm="60"/>
+</Joint>
+<Joint type="BallJoint" name="LeftUpLeg" parent_name="Hips" size="0.1 0.443705 0.1" mass="7">
+<BodyPosition translation="0.000000 -0.221853 0.001423" />
+<JointPosition translation="0.082078 -0.067517 -0.015996" />
+<TorqueLimit norm="200"/>
+</Joint>
+<Joint type="BallJoint" name="LeftLeg" parent_name="LeftUpLeg" size="0.1 0.444279 0.1" mass="3">
+<BodyPosition translation="0.000000 -0.222140 -0.014911" />
+<JointPosition translation="0.000000 -0.443705 0.002846" />
+<TorqueLimit norm="150"/>
+</Joint>
+<Joint type="BallJoint" name="LeftFoot" parent_name="LeftLeg" size="0.08 0.097287 0.107106" mass="0.6">
+<BodyPosition translation="0.000000 -0.048643 0.053553" />
+<JointPosition translation="0.000000 -0.444279 -0.029822" />
+<TorqueLimit norm="90"/>
+</Joint>
+<Joint type="BallJoint" name="LeftToeBase" parent_name="LeftFoot" size="0.08 0.08 0.090000" mass="0.3">
+<BodyPosition translation="0.000000 0.03 0.045000" />
+<JointPosition translation="0.000000 -0.087287 0.107106" />
+<TorqueLimit norm="60"/>
+</Joint>
+<Joint type="BallJoint" name="RightUpLeg" parent_name="Hips" size="0.1 0.443705 0.1" mass="7">
+<BodyPosition translation="0.000000 -0.221853 0.001431" />
+<JointPosition translation="-0.082078 -0.067517 -0.015996" />
+<TorqueLimit norm="200"/>
+</Joint>
+<Joint type="BallJoint" name="RightLeg" parent_name="RightUpLeg" size="0.1 0.444277 0.1" mass="3">
+<BodyPosition translation="0.000000 -0.222139 -0.014919" />
+<JointPosition translation="0.000000 -0.443705 0.002862" />
+<TorqueLimit norm="150"/>
+</Joint>
+<Joint type="BallJoint" name="RightFoot" parent_name="RightLeg" size="0.08 0.097287 0.107106" mass="0.6">
+<BodyPosition translation="0.000000 -0.048643 0.053553" />
+<JointPosition translation="0.000000 -0.444277 -0.029838" />
+<TorqueLimit norm="90"/>
+</Joint>
+<Joint type="BallJoint" name="RightToeBase" parent_name="RightFoot" size="0.08 0.08 0.090000" mass="0.3">
+<BodyPosition translation="0.000000 0.03 0.045000" />
+<JointPosition translation="0.000000 -0.087287 0.107106" />
+<TorqueLimit norm="60"/>
+</Joint>
+</Skeleton>

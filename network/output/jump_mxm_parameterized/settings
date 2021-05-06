@@ -1,0 +1,13 @@
+2021-04-30 17:25:15
+test_name : jump_mxm_lim_p3
+num slave : 8
+num state : 291
+num action : 64
+num param : 2
+learning rate : 0.0002
+gamma : 0.95
+lambd : 0.95
+batch size : 1024
+steps per iteration : 5000
+clip ratio : 0.2
+pretrained : True

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skeleton name="Ground">
+	<Joint type="WeldJoint" name="Ground" parent_name="None" size="10000.0 1.0 10000.0" mass="10.0">
+		<BodyPosition translation="0 -0.5 0"></BodyPosition>
+		<JointPosition translation="0 0 0"></JointPosition>
+	</Joint>
+</Skeleton>

@@ -1,0 +1,5 @@
+build
+py_env
+c_env
+*/__pycache__/
+*/*.so
