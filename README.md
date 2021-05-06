@@ -3,7 +3,7 @@
 
 ## Abstract
 
-This code implements the paper [Learning a family of motor skills from a single motion clip](). 
+This code implements the paper [Learning a family of motor skills from a single motion clip](http://mrl.snu.ac.kr/research/ProjectParameterizedMotion/ParameterizedMotion.html). 
 This system learns parameterized motor skills from a single motion clip in physics simulation. 
 Our algorithm can automatically spatio-temporally edit the given motion clip to satisfy given the task space.
 This code is written in C++ and Python, based on [Tensorflow2](https://github.com/tensorflow/tensorflow) and [DartSim](https://github.com/dartsim/dart). 
