@@ -1,21 +1,57 @@
+BSD 3-Clause License
+
+© 2020 NCSOFT Corporation & SNU R&D Foundation. All Rights Reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+Permission is granted to anyone to use this software subject to acceptance and
+compliance with the acceptance and compliance with any other open source licenses
+attached below this copyright notice.
+
+The following restrictions shall also apply:
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+*	Neither the name of NCSOFT Corporation nor the names of its contributors
+  may be used to endorse or promote products derived from this software without
+  specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCI DENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
+THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Any questions about our licensed work can be sent to opensource@ncsoft.com.
+----------------------------------------------------------------------------------------------------
+This software uses Open Source Software (OSS). You can find the link
+for the source code of these open source projects, along with applicable license information, below.
+
+baselines
+https://github.com/openai/baselines
+Copyright (c) 2017 OpenAI (http://openai.com)
 MIT License
 
-Copyright (c) 2021 Seyoung Lee
+CMake
+https://github.com/Kitware/Cmake
+Copyright 2000-2021 Kitware, Inc. and Contributors
+BSD 3-Clause "New" or "Revised" License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+DART
+https://github.com/dartsim/dart
+Copyright (c) 2011-2016, Humanoid Lab, Georgia Tech Research Corporation
+Copyright (c) 2016-2017, Personal Robotics Lab, Carnegie Mellon University
+Copyright (c) 2011-2019, Graphics Lab, Georgia Tech Research Corporation
+Copyright (c) 2017-2019, Personal Robotics Lab, University of Washington
+Copyright (c) 2017-2019, Open Source Robotics Foundation
+Copyright (c) 2019-2021, The Movement Lab, Stanford University
+Copyright (c) 2019-2021, Jeongseok Lee
+All rights reserved.
+BSD 2-Clause "Simplified" License
