@@ -29,6 +29,42 @@ sudo ./install.sh
 ```
 This script download sources on ``c_env`` and ``py_env`` and installs on the same directory.
 
+**Note:** The project uses a customized version of dartpy that improves stable PD controllers. The path for this is already in the installation script, but certain dependencies may not be included. The dependencies are the same than the reference DART implementation. Therefore, if the previous script gives you an error, please check the dependencies on the DART website (http://dartsim.github.io/install_dartpy_on_ubuntu.html), which I also include below:
+
+```
+# Required dependencies
+sudo apt-get install build-essential cmake pkg-config git
+sudo apt-get install libeigen3-dev libassimp-dev libccd-dev libfcl-dev libboost-regex-dev libboost-system-dev
+sudo apt-get install libtinyxml2-dev liburdfdom-dev
+sudo apt-get install libxi-dev libxmu-dev freeglut3-dev libopenscenegraph-dev
+sudo apt-get install python3-pip
+# Ubuntu 18.10 and older
+git clone https://github.com/pybind/pybind11 -b 'v2.2.4' --single-branch --depth 1
+cd pybind11
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release -DPYBIND11_TEST=OFF
+make -j4
+sudo make install
+# Ubuntu 19.04 and newer
+sudo apt-get install pybind11-dev
+
+# Optional dependencies
+sudo apt-get install libbullet-dev libode-dev liboctomap-dev
+# Ubuntu 16.04 and 18.04
+sudo apt-get install libnlopt-dev
+# Ubuntu 18.10 and later
+sudo apt-get install libnlopt-cxx-dev
+```
+
+
+
+
+
+
+
+
+
 ### Building
 You can build via:
 ```bash
