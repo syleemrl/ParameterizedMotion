@@ -43,15 +43,19 @@ install_library() {
 
     make -j8 install
 }
+
+
 install_boost() {
+	mkdir boost
+	export  export Boost_INCLUDE_DIR =$PROJECTDIR/boost
 	cd $ENVDIR/src
-  wget https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz
-  tar -xzf ./boost_1_69_0.tar.gz
-  rm ./boost_1_69_0.tar.gz
-  cd ./boost_1_69_0
-	# git clone --branch boost-1.69.0 https://github.com/boostorg/boost.git
-	# cd $ENVDIR/src/boost
- #  git submodule update --init --depth 1 --recursive
+  #wget https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz
+  #tar -xzf ./boost_1_69_0.tar.gz
+  #rm ./boost_1_69_0.tar.gz
+  #cd ./boost_1_69_0
+  git clone --branch boost-1.69.0 https://github.com/boostorg/boost.git
+  cd $ENVDIR/src/boost
+  git submodule update --init --depth 1 --recursive
 	./bootstrap.sh --with-python=python3 --with-libraries=atomic,chrono,filesystem,python,system,regex,program_options
 	./b2 --with-python --with-filesystem --with-regex --with-system --with-program_options --prefix=$ENVDIR install
 }

@@ -29,15 +29,66 @@ sudo ./install.sh
 ```
 This script download sources on ``c_env`` and ``py_env`` and installs on the same directory.
 
+**Note:** The project uses a customized version of dartpy that improves stable PD controllers. The path for this is already in the installation script, but certain dependencies may not be included. The dependencies are the same than the reference DART implementation. Therefore, if the previous script gives you an error, please check the dependencies on the DART website (http://dartsim.github.io/install_dartpy_on_ubuntu.html), which I also include below:
+
+```
+# Required dependencies
+sudo apt-get install build-essential cmake pkg-config git
+sudo apt-get install libeigen3-dev libassimp-dev libccd-dev libfcl-dev libboost-regex-dev libboost-system-dev
+sudo apt-get install libtinyxml2-dev liburdfdom-dev
+sudo apt-get install libxi-dev libxmu-dev freeglut3-dev libopenscenegraph-dev
+sudo apt-get install python3-pip
+# Ubuntu 18.10 and older
+git clone https://github.com/pybind/pybind11 -b 'v2.2.4' --single-branch --depth 1
+cd pybind11
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release -DPYBIND11_TEST=OFF
+make -j4
+sudo make install
+# Ubuntu 19.04 and newer
+sudo apt-get install pybind11-dev
+
+# Optional dependencies
+sudo apt-get install libbullet-dev libode-dev liboctomap-dev
+# Ubuntu 16.04 and 18.04
+sudo apt-get install libnlopt-dev
+# Ubuntu 18.10 and later
+sudo apt-get install libnlopt-cxx-dev
+```
+
+
+
+
+
+
+
+
+
 ### Building
 You can build via:
 ```bash
 sudo ./run_cmake.sh
 cd build
-make -jN
+sudo make -jN
 ```
 
+In the previous, N should be a positive integer, for example 4
+
+
+
+**Note:**  If it complains about not finding boost, before making the previous you should define:
+
+```
+set BOOST_INCLUDEDIR ~/PUT_HERE_THE_APROPRIATE_PATH/ParameterizedMotion/boost/boost
+```
+
+
+
+
+
 ##  Render
+
 You can render the input motion file/trained network by executing ``render`` file in ``build/render``. 
 Sample motions, pretrained model and parameterized model are included in this repository.
 You should activate the installed virtual environment by ``source ../py_env/bin/activate`` before running.
@@ -45,10 +96,50 @@ You should activate the installed virtual environment by ``source ../py_env/bin/
 ### View BVH file
 You can load BVH files in ``data/motion``
 ```bash
-./render --bvh=MOTION_FILE.bvh
+./render --bvh=MOTION_FILE.bvh $
 ```
 
+**Note:** you only have to add the name of the motion, not the path. For example:
+
+```
+   ./render --bvh=jump_mxm.bvh
+```
+
+
+
+### TroubleShooting
+
+If you compile whel but when you execute you have an error like:
+
+```
+(py_env) artanim@test:~/ParameterizedMotion$ ./render --bvh=jump_mxm.bvh 
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  stold
+Aborted (core dumped)
+```
+
+This can be caused by a problem of your regional settings inside Ubuntu. Specifically, open the Settings menu, choose the option *Region & Formats* (see below). 
+
+
+
+![image-20210825150242210](.\img\image-20210825150242210.png)
+
+Once there, set the *Formats* option to an english speaking country, and make sure that hte decimal notation is a dot, and not a comma (see below). 
+
+![image-20210825151343786](.\img\image-20210825151343786.png)
+
+
+
+Once it is defined, click on *Manage Installed Languages*, and when the window opens click on *Manage Installed Languages* (see below) 
+
+
+
+![image-20210825150458683](.\img\image-20210825150458683.png)
+
+
+
 ### View pretrained network
+
 You can load trained models in ``network/output``
 
 ```bash
